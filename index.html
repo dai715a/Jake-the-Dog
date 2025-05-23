@@ -59,6 +59,15 @@
       padding: 60px 20px;
       text-align: center;
     }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
     .content img {
       max-width: 90%;
       height: auto;
@@ -72,6 +81,15 @@
       color: #777;
     }
   </style>
+  <script>
+    window.addEventListener('scroll', function() {
+      var img = document.querySelector('.fade-in');
+      var rect = img.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        img.classList.add('visible');
+      }
+    });
+  </script>
 </head>
 <body>
   <section class="hero">
@@ -88,7 +106,7 @@
   <section class="content">
     <h2>Giới thiệu trò chơi</h2>
     <p>Jake là chú chó dẻo dai nhất, sẵn sàng lao vào các nhiệm vụ thử thách, thu thập vật phẩm và nâng cấp sức mạnh!</p>
-    <img src="gameplay.jpg" alt="Ảnh gameplay Jake the Dog">
+    <img src="gameplay.jpg" alt="Ảnh gameplay Jake the Dog" class="fade-in">
   </section>
 
   <footer>
