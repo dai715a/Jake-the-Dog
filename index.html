@@ -68,6 +68,12 @@
       opacity: 1;
       transform: translateY(0);
     }
+    .zoom-hover {
+      transition: transform 0.5s ease;
+    }
+    .zoom-hover:hover {
+      transform: scale(1.05);
+    }
     .content img {
       max-width: 90%;
       height: auto;
@@ -106,7 +112,7 @@
   <section class="content">
     <h2>Giới thiệu trò chơi</h2>
     <p>Jake là chú chó dẻo dai nhất, sẵn sàng lao vào các nhiệm vụ thử thách, thu thập vật phẩm và nâng cấp sức mạnh!</p>
-    <img src="gameplay.jpg" alt="Ảnh gameplay Jake the Dog" class="fade-in">
+    <img src="gameplay.jpg" alt="Ảnh gameplay Jake the Dog" class="fade-in zoom-hover">
   </section>
 
   <footer>
